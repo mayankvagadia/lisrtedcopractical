@@ -10,4 +10,11 @@
 
     <color name="main_background">#0E6FFF</color>
     <color name="white_background">#F5F5F5</color>
+    <color name="border_color">#D8D8D8</color>
+    <color name="bg_green">#e0f0e2</color>
+    <color name="bg_green_border">#b0e6b7</color>
+    <color name="bg_blue">#e8f1ff</color>
+    <color name="bg_blue_border">#b3d1fc</color>
+
+    <color name="gray_text">#999CA0</color>
 </resources>

@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ListedCo</string>
+    <string name="view_all_links">View all Links</string>
+    <string name="ajay_manva">Ajay Manva</string>
+    <string name="good_morning">Good Morning</string>
+    <string name="view_analytics">View Analytics</string>
+    <string name="talk_with_us">Talk with us</string>
+    <string name="frequently_asked_question">Frequently Asked Questions</string>
 </resources>
