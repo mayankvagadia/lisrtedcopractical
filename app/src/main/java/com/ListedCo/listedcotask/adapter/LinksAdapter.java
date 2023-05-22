@@ -75,9 +75,9 @@ public class LinksAdapter extends RecyclerView.Adapter<LinksAdapter.LinksViewHol
         }
     }
 
-    public void setData(ArrayList<RecentLink> links) {
+    public void setData(ArrayList<RecentLink> links_NEW) {
         this.links.clear();
-        this.links = links;
+        this.links.addAll(links_NEW);
         notifyDataSetChanged();
     }
 }
