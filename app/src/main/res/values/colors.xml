@@ -15,6 +15,7 @@
     <color name="bg_green_border">#b0e6b7</color>
     <color name="bg_blue">#e8f1ff</color>
     <color name="bg_blue_border">#b3d1fc</color>
+    <color name="bg_dotted_border">#A6C7FF</color>
 
     <color name="gray_text">#999CA0</color>
 </resources>

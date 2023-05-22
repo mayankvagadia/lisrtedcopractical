@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -48,7 +48,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_25sdp"
             android:background="@drawable/bg_home"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -102,6 +102,190 @@
                 app:layout_constraintStart_toEndOf="@+id/textView"
                 app:layout_constraintTop_toTopOf="@+id/textView" />
 
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cd_graph"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:layout_constraintEnd_toStartOf="@+id/gd_right_innner"
+                app:layout_constraintStart_toStartOf="@+id/gd_left_inner"
+                app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:paddingVertical="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/txt_overview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Overview"
+                        android:textColor="@color/gray_text" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/bg_analutics"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:fontFamily="@font/figtreeregular"
+                        android:paddingHorizontal="@dimen/_10sdp"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:text="22 Aug - 23 Sept"
+                        android:textColor="@color/black"
+                        app:drawableEndCompat="@drawable/clock" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_150sdp"
+                        android:layout_below="@id/txt_overview"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:src="@drawable/chart" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <HorizontalScrollView
+                android:id="@+id/hr_tiles"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toStartOf="@+id/gd_right_innner"
+                app:layout_constraintStart_toStartOf="@+id/gd_left_inner"
+                app:layout_constraintTop_toBottomOf="@+id/cd_graph">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="@dimen/_10sdp"
+                        android:layout_marginHorizontal="@dimen/_5sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_15sdp">
+
+                            <ImageView
+                                android:layout_width="@dimen/_32sdp"
+                                android:layout_height="@dimen/_32sdp"
+                                android:src="@drawable/today_click"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="123"
+                                android:textSize="@dimen/_14ssp"
+                                android:layout_marginTop="@dimen/_15sdp"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:fontFamily="@font/figtreebold"
+                                android:textColor="@color/black"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Today’s clicks"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:fontFamily="@font/figtreeregular"
+                                android:textColor="@color/gray_text"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="@dimen/_10sdp"
+                        android:layout_marginHorizontal="@dimen/_5sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_15sdp">
+
+                            <ImageView
+                                android:layout_width="@dimen/_32sdp"
+                                android:layout_height="@dimen/_32sdp"
+                                android:src="@drawable/location"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Ahamedab.."
+                                android:textSize="@dimen/_14ssp"
+                                android:layout_marginTop="@dimen/_15sdp"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:fontFamily="@font/figtreebold"
+                                android:textColor="@color/black"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Top Location"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:fontFamily="@font/figtreeregular"
+                                android:textColor="@color/gray_text"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="@dimen/_10sdp"
+                        android:layout_marginHorizontal="@dimen/_5sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_15sdp">
+
+                            <ImageView
+                                android:layout_width="@dimen/_32sdp"
+                                android:layout_height="@dimen/_32sdp"
+                                android:src="@drawable/generic"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Instagram"
+                                android:textSize="@dimen/_14ssp"
+                                android:layout_marginTop="@dimen/_15sdp"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:fontFamily="@font/figtreebold"
+                                android:textColor="@color/black"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Top source"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:fontFamily="@font/figtreeregular"
+                                android:textColor="@color/gray_text"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
             <LinearLayout
                 android:id="@+id/ll_analytics"
                 android:layout_width="0dp"
@@ -112,7 +296,7 @@
                 android:paddingVertical="@dimen/_10sdp"
                 app:layout_constraintEnd_toStartOf="@+id/gd_right_innner"
                 app:layout_constraintStart_toStartOf="@+id/gd_left_inner"
-                app:layout_constraintTop_toBottomOf="@+id/textView">
+                app:layout_constraintTop_toBottomOf="@+id/hr_tiles">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -122,12 +306,68 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/_13ssp"
                     android:layout_marginLeft="@dimen/_10sdp"
                     android:fontFamily="@font/figtreebold"
-                    android:text="@string/view_analytics" />
+                    android:text="@string/view_analytics"
+                    android:textSize="@dimen/_13ssp" />
 
             </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ll_links"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                app:layout_constraintEnd_toStartOf="@+id/gd_right_innner"
+                app:layout_constraintStart_toStartOf="@+id/gd_left_inner"
+                app:layout_constraintTop_toBottomOf="@+id/ll_analytics">
+
+                <TextView
+                    android:id="@+id/top_links"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bg_txt_links"
+                    android:fontFamily="@font/figtreeregular"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:text="@string/top_links"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/recent_links"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/recent_links"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/top_links"
+                    android:fontFamily="@font/figtreeregular"
+                    android:text="@string/recent_links"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/imageButton"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/top_links"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:background="@null"
+                    android:src="@drawable/ic_search"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_product"
@@ -136,7 +376,7 @@
                 android:layout_marginTop="@dimen/_10sdp"
                 app:layout_constraintEnd_toStartOf="@+id/gd_right_innner"
                 app:layout_constraintStart_toStartOf="@+id/gd_left_inner"
-                app:layout_constraintTop_toBottomOf="@+id/ll_analytics" />
+                app:layout_constraintTop_toBottomOf="@+id/ll_links" />
 
             <LinearLayout
                 android:id="@+id/ll_all_links"
@@ -158,10 +398,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/_13ssp"
                     android:layout_marginLeft="@dimen/_10sdp"
                     android:fontFamily="@font/figtreebold"
-                    android:text="@string/view_all_links" />
+                    android:text="@string/view_all_links"
+                    android:textSize="@dimen/_13ssp" />
             </LinearLayout>
 
             <LinearLayout
@@ -169,8 +409,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_15sdp"
-                android:gravity="center_vertical"
                 android:background="@drawable/bg_talk_with_us"
+                android:gravity="center_vertical"
                 android:paddingVertical="@dimen/_10sdp"
                 app:layout_constraintEnd_toStartOf="@+id/gd_right_innner"
                 app:layout_constraintStart_toStartOf="@+id/gd_left_inner"
@@ -179,16 +419,16 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/talk_to_us"
-                    android:layout_marginStart="@dimen/_15sdp"/>
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:src="@drawable/talk_to_us" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/_13ssp"
                     android:layout_marginLeft="@dimen/_10sdp"
                     android:fontFamily="@font/figtreebold"
-                    android:text="@string/talk_with_us" />
+                    android:text="@string/talk_with_us"
+                    android:textSize="@dimen/_13ssp" />
             </LinearLayout>
 
             <LinearLayout
@@ -196,9 +436,11 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:gravity="center_vertical"
+                android:layout_marginBottom="@dimen/_10sdp"
                 android:background="@drawable/bg_question"
+                android:gravity="center_vertical"
                 android:paddingVertical="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/gd_right_innner"
                 app:layout_constraintStart_toStartOf="@+id/gd_left_inner"
                 app:layout_constraintTop_toBottomOf="@+id/ll_talk_to_us">
@@ -206,18 +448,18 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/question_mark"
-                    android:layout_marginStart="@dimen/_15sdp"/>
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:src="@drawable/question_mark" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/_13ssp"
                     android:layout_marginLeft="@dimen/_10sdp"
                     android:fontFamily="@font/figtreebold"
-                    android:text="@string/frequently_asked_question" />
+                    android:text="@string/frequently_asked_question"
+                    android:textSize="@dimen/_13ssp" />
             </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
-</LinearLayout>
+</ScrollView>
