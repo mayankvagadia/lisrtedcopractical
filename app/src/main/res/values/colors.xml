@@ -18,4 +18,5 @@
     <color name="bg_dotted_border">#A6C7FF</color>
 
     <color name="gray_text">#999CA0</color>
+    <color name="semi_transparent">#80FFFFFF</color>
 </resources>

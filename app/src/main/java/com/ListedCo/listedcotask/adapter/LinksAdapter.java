@@ -30,9 +30,9 @@ public class LinksAdapter extends RecyclerView.Adapter<LinksAdapter.LinksViewHol
     ArrayList<RecentLink> links;
     Context context;
 
-    public LinksAdapter(Context context, ArrayList<RecentLink> links) {
+    public LinksAdapter(Context context) {
         this.context = context;
-        this.links = links;
+        this.links = new ArrayList<>();
     }
 
     @NonNull
@@ -73,5 +73,11 @@ public class LinksAdapter extends RecyclerView.Adapter<LinksAdapter.LinksViewHol
             txt_link_count = itemView.findViewById(R.id.txt_link_count);
             txt_link = itemView.findViewById(R.id.txt_link);
         }
+    }
+
+    public void setData(ArrayList<RecentLink> links) {
+        this.links.clear();
+        this.links = links;
+        notifyDataSetChanged();
     }
 }
